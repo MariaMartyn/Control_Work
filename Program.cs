@@ -18,9 +18,25 @@
     Console.WriteLine("\b\b ]");
 }
 
+string[] NewSortedArray(string[] array)
+{   
+    string[] sortedArray = new string[array.Length];
+    
+    for (int i = 0; i < array.Length; i++)
+    {   
+        int length = array[i].Length;
+        if (length <= 3) sortedArray[i] += array[i];
+
+    }
+    return sortedArray;
+}
+
 
 Console.Write("Input the size of the massive: ");
 int size = Convert.ToInt32(Console.ReadLine());
 
 string[] newArray = InputArray(size);
 PrintArray(newArray);
+
+Console.WriteLine($"New sorted array: ");
+PrintArray(NewSortedArray(newArray));
