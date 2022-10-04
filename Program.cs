@@ -10,7 +10,17 @@
      return array;
 }
 
+ void PrintArray (string[] array)
+{
+    Console.Write("[ ");
+    for (int i = 0; i < array.Length; i++)
+        Console.Write($"{array[i]}, ");  
+    Console.WriteLine("\b\b ]");
+}
+
+
 Console.Write("Input the size of the massive: ");
 int size = Convert.ToInt32(Console.ReadLine());
 
 string[] newArray = InputArray(size);
+PrintArray(newArray);
